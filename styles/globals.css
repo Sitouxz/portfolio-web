@@ -6,3 +6,43 @@
   font-family: 'burtons';
   src: url('../public/Burtons.otf');
 }
+
+html {
+  background: #f7f9fb;
+}
+
+body {
+  margin: 0;
+  background: #f7f9fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.prose-markdown h4 {
+  margin: 0 0 10px;
+  color: #191c1e;
+  font-family: Geist, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.prose-markdown p,
+.prose-markdown li {
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.prose-markdown ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
+}
+
+.prose-markdown code {
+  border-radius: 4px;
+  background: #f2f4f6;
+  padding: 2px 5px;
+  color: #95002a;
+}
