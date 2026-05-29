@@ -94,7 +94,11 @@ export default function Dashboard() {
   );
 
   useEffect(() => {
-    setContent(loadStoredContent(defaultPortfolioContent));
+    const frame = window.requestAnimationFrame(() => {
+      setContent(loadStoredContent(defaultPortfolioContent));
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, []);
 
   function saveContent() {

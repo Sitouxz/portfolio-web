@@ -212,7 +212,11 @@ export default function Home() {
   );
 
   useEffect(() => {
-    setContent(loadStoredContent(defaultPortfolioContent));
+    const frame = window.requestAnimationFrame(() => {
+      setContent(loadStoredContent(defaultPortfolioContent));
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, []);
 
   return (
